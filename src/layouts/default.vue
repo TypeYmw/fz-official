@@ -6,11 +6,10 @@
  * @Description: 
 -->
 <template>
-  <div class="flex flex-col h-screen">
+  <div class="">
     <!-- 顶部 -->
     <Header class="flex-0" />
     <nuxtPage class="flex-1 overflow-auto" />
-    <Footer class=""/>
   </div>
 </template>
 
