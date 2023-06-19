@@ -12,5 +12,5 @@ export default defineNuxtConfig({
   modules: [
     '@element-plus/nuxt',
     '@unocss/nuxt',
-  ],
+  ]
 })

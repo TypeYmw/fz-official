@@ -12,21 +12,43 @@
       :spaceBetween="30"
       :centeredSlides="true"
       :autoplay="{
-        delay: 1000,
-        disableOnInteraction: false,
+        delay: 2000,
+        disableOnInteraction: true,
       }"
       :pagination="{
         clickable: true,
       }"
       :navigation="false"
       :modules="modules"
-      class="h-350px"
+      class="h-550px"
     >
-      <swiper-slide>Slide 1</swiper-slide>
-      <swiper-slide>Slide 2</swiper-slide><swiper-slide>Slide 3</swiper-slide>
-      <swiper-slide>Slide 4</swiper-slide><swiper-slide>Slide 5</swiper-slide>
-      <swiper-slide>Slide 6</swiper-slide><swiper-slide>Slide 7</swiper-slide>
-      <swiper-slide>Slide 8</swiper-slide><swiper-slide>Slide 9</swiper-slide>
+      <swiper-slide>
+        <div class="relative">
+          <img class="w-100% absolute" src="/assets/images/paper_1.jpg" alt="Discover Nuxt 3" />
+          <div
+            class="h-350px absolute flex items-center justify-center flex-col !p-l-50px"
+          >
+            <div class="text-size-46px text-#ccc font-bold">良心品质, 良心服务</div>
+            <div class="text-#999 text-size-20px !m-t-10px">专注印刷用纸、包装用纸、特殊用纸</div>
+            
+          </div>
+          
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="relative">
+          <img class="w-100% absolute" src="/assets/images/paper_2.jpg" alt="Discover Nuxt 3" />
+          <div
+            class="h-550px w-100% flex justify-center items-center flex-col absolute"
+          >
+            <div class="card">
+              <div class="text-size-46px text-#fff">纸张种类齐全</div>
+              <div class="text-size-32px text-#aaa">从事行业十余年，经验丰富</div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </swiper-slide>
     </swiper>
     <section>
       <div class="text-center text-size-48px sub-title">服务种类</div>
@@ -36,10 +58,38 @@
         <div class="w-250px h-350px bg-black text-center category-item">1</div>
       </div>
     </section>
-
-    <section> 
-      
+    <div class="text-center text-size-48px sub-title">公司实力</div>
+    <section class="!m-t-20px"> 
+      <el-row :gutter="20" justify="center" class="w-100%">
+        <el-col :span="10" class="bg-#ccc h-500px text-center leading-400px">团队图片，占地面积什么的</el-col>
+        <el-col :span="10" class="leading-400px">文字介绍</el-col>
+      </el-row>
     </section>
+
+    <section class="!m-t-20px"> 
+      <el-row :gutter="20" justify="center" class="w-100%">
+        <el-col :span="10" class="leading-400px">工厂生产相关东西</el-col>
+        <el-col :span="10" class="bg-#ccc h-500px text-center leading-400px">工厂生产相关图片</el-col>
+        
+      </el-row>
+    </section>
+
+    <section class="!m-t-20px"> 
+      <el-row :gutter="20" justify="center" class="w-100%">
+        <el-col :span="20" class="bg-#ccc h-500px text-center leading-400px">展示视频</el-col>
+      </el-row>
+    </section>
+
+    <div class="text-center text-size-48px sub-title">联系我们</div>
+    <section class="!m-t-20px flex justify-around items-center"> 
+      <div class="h-200px w-200px text-center leading-200px bg-#ccc">二维码</div>
+      <div class="h-200px w-200px text-center leading-200px bg-#ccc">二维码</div>
+      <div class="h-200px w-200px text-center leading-200px bg-#ccc">二维码</div>
+      <div class="h-200px w-200px text-center leading-200px bg-#ccc">二维码</div>
+      <div class="h-200px w-200px text-center leading-200px bg-#ccc">二维码</div>
+      <div class="h-200px w-200px text-center leading-200px bg-#ccc">二维码</div>
+    </section>
+
 
 
     <div class="contact-us" @click="showQrCode">
@@ -74,7 +124,7 @@ const showQrCode = () =>{
 </script>
 
 <style scoped lang="less">
-* {
+html, * {
   margin: 0;
   padding: 0;
 }
@@ -102,6 +152,12 @@ const showQrCode = () =>{
     height: 100px;
     background: #000;
   }
+}
+
+.card {
+  padding: 30px;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 10px;
 }
 
 </style>
